@@ -30,11 +30,13 @@ cc_library_static {
         "-Wno-pointer-arith",
         "-Wno-sign-compare",
         "-Wno-unused-parameter",
+        "-Wno-null-pointer-arithmetic",
     ],
     local_include_dirs: ["include"],
     generated_headers: ["ffi_header"],
     export_generated_headers: ["ffi_header"],
     srcs: [
+        "src/closures.c",
         "src/debug.c",
         "src/java_raw_api.c",
         "src/prep_cif.c",

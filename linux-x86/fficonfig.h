@@ -14,6 +14,9 @@
 /* Define this if you want extra debugging. */
 #undef FFI_DEBUG
 
+/* Cannot use malloc on this target, so, we revert to alternative means */
+#define FFI_MMAP_EXEC_WRIT 1
+
 /* Define this is you do not want support for the raw API. */
 #undef FFI_NO_RAW_API
 
